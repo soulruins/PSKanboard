@@ -2,6 +2,8 @@
 PowerShell module for [Kanboard](https://kanboard.net/) (kanban task manager)
 ## Features
 
+Work in progress!
+
 * Get list all projects
 * Get list all columns
 * Get list all tasks
