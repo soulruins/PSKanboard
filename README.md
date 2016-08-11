@@ -27,8 +27,9 @@ Install-Module PSKanboard
 
 ####Powershell V4 and Earlier
 To install to your personal modules folder (e.g. ~\Documents\WindowsPowerShell\Modules), run:
-
-> waiting...
+```powershell
+iex (new-object System.Net.WebClient).DownloadString('https://github.com/soulruins/PSKanboard/blob/master/Install.ps1')
+```
 
 ## What's new
 
