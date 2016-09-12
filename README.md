@@ -19,6 +19,14 @@ Work in progress!
 3. Execute `Import-Module PSKanboard` (or add this to your profile)
 4. Enjoy!
 
+### FAQ
+
+By default, PowerShell restricts execution of all scripts. This is all about security. To "fix" this run PowerShell as Administrator and call
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
+For mode details run get-help about_signing or get-help about_Execution_Policies.
+
 ## What's new
 
 #### 13/08/2016
