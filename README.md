@@ -3,7 +3,7 @@ PowerShell module for [Kanboard](https://kanboard.net/) (kanban task manager)
 
 ![pic](http://i.imgur.com/vrTWxND.png)
 
-## Features
+## Features (and ToDo)
 
 Work in progress!
 
@@ -11,9 +11,9 @@ Work in progress!
 - [x] Get list all columns
 - [x] Get list all tasks
 - [ ] Create task (**soon**)
+- [ ] Convert datetime from unix timestamp (**soon**)
 - [x] Support pipeline
 - [ ] More soon
-
 
 ##  Installation
 
