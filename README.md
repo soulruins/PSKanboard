@@ -4,32 +4,20 @@ PowerShell module for [Kanboard](https://kanboard.net/) (kanban task manager)
 
 Work in progress!
 
-* Get list all projects
-* Get list all columns
-* Get list all tasks
-* Create task
-* ...
-* Support pipeline
-* ...
+- [x] Get list all projects
+- [x] Get list all columns
+- [x] Get list all tasks
+- [ ] Create task (**soon**)
+- [x] Support pipeline
+- [ ] More soon
 
-## [COMING SOON] Installation
-####[Powershell V5](https://www.microsoft.com/en-us/download/details.aspx?id=50395) and Later
-You can install ImportExcel directly from the Powershell Gallery
 
-* [Recommended] Install to your personal Powershell Modules folder
-```powershell
-Install-Module PSKanboard -scope CurrentUser
-```
-* [Requires Elevation] Install for Everyone (computer Powershell Modules folder)
-```powershell
-Install-Module PSKanboard
-```
+##  Installation
 
-####Powershell V4 and Earlier
-To install to your personal modules folder (e.g. ~\Documents\WindowsPowerShell\Modules), run:
-```powershell
-iex (new-object System.Net.WebClient).DownloadString('https://github.com/soulruins/PSKanboard/blob/master/Install.ps1')
-```
+1. Download
+2. Copy `PSKanboard` to your [modules folder](https://msdn.microsoft.com/en-us/library/dd878350(v=vs.85).aspx) (e.g. `$Home\Documents\WindowsPowerShell\PSKanboard`)
+3. Execute `Import-Module PSKanboard` (or add this to your profile)
+4. Enjoy!
 
 ## What's new
 
