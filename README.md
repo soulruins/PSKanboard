@@ -1,7 +1,7 @@
 # PSKanboard
 PowerShell module for [Kanboard](https://kanboard.net/) (kanban task manager)
 
-![pic](http://i.imgur.com/DABRuej.png)
+![pic](http://i.imgur.com/vrTWxND.png)
 
 ## Features
 
