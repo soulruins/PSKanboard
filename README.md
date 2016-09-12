@@ -19,8 +19,9 @@ Work in progress!
 
 1. Download
 2. Copy `PSKanboard` to your [modules folder](https://msdn.microsoft.com/en-us/library/dd878350(v=vs.85).aspx) (e.g. `$Home\Documents\WindowsPowerShell\PSKanboard`)
-3. Execute `Import-Module PSKanboard` (or add this to your profile)
-4. Enjoy!
+3. Edit `pskanboard-conf.ps1` (e.g. `notepad $Home\Documents\WindowsPowerShell\PSKanboard\pskanboard-conf.ps1`)
+4. Execute `Import-Module PSKanboard` (or add this to your profile)
+5. Enjoy!
 
 ### FAQ
 
