@@ -1,7 +1,7 @@
 # PSKanboard
 PowerShell module for [Kanboard](https://kanboard.net/) (kanban task manager)
 
-![pic](http://i.imgur.com/vrTWxND.png)
+![pic](http://i.imgur.com/9Op00GG.png)
 
 ## Features (and ToDo)
 
@@ -11,7 +11,7 @@ Work in progress!
 - [x] Get list all columns
 - [x] Get list all tasks
 - [ ] Create task (**soon**)
-- [ ] Convert datetime from unix timestamp (**soon**)
+- [x] Convert datetime from unix timestamp (`date_creation`,`date_due`,`date_modification`,`date_moved`,`date_completed` ...)
 - [x] Support pipeline
 - [ ] More soon
 
@@ -32,6 +32,10 @@ Set-ExecutionPolicy RemoteSigned
 For mode details run get-help about_signing or get-help about_Execution_Policies.
 
 ## What's new
+
+#### 13/09/2016
+
+* Convert datetime from unix timestamp (`date_creation`,`date_due`,`date_modification`,`date_moved`,`date_completed` ...)
 
 #### 13/08/2016
 
