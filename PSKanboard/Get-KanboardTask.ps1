@@ -40,6 +40,14 @@ function Get-KanboardTask {
     $json = $json | ConvertTo-Json
     ##
     $res = Invoke-RestMethod -Method Post -Uri $uri -Credential $cred -Body $json -ContentType 'application/json'
+    $res.result = $res.result | ForEach-Object {
+            $_.date_creation = if ($_.date_creation -gt 0) { [timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($_.date_creation)) } else { "0" }
+            $_.date_due = if ($_.date_due -gt 0) { [timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($_.date_due)) } else { "0" }
+            $_.date_modification = if ($_.date_modification -gt 0) { [timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($_.date_modification)) } else { "0" }
+            $_.date_moved = if ($_.date_moved -gt 0) { [timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($_.date_moved)) } else { "0" }
+            $_.date_completed = if ($_.date_completed) { [timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($_.date_completed)) }
+            $_
+            }
     if ($column_id) {
         $res.result | ? { $_.column_id -eq $column_id }
         } elseif ($column_title) {

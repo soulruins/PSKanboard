@@ -27,6 +27,12 @@ function Get-KanboardProject {
     $json = $json | ConvertTo-Json
     ##
     $res = Invoke-RestMethod -Method Post -Uri $uri -Credential $cred -Body $json -ContentType 'application/json'
+    $res.result = $res.result | ForEach-Object {
+        $_.last_modified =  if ($_.last_modified -gt 0) { [timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($_.last_modified)) }
+        $_.start_date =  if ($_.start_date -gt 0) { [timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($_.start_date)) }
+        $_.end_date =  if ($_.end_date -gt 0) { [timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($_.end_date)) }
+        $_
+    }
     if ($i) {
         $res.result | ? { $_.id -eq $i }
         } elseif ($project_name) {
